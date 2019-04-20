@@ -2,7 +2,7 @@
 // create a loop to go over array and create a buttons in HTML
 
 $(function() {
-  var topics = ["Deer", "Donkey", "Dog", "Duck", "Dolphin"];
+  var topics = ["cat", "dog", "bird", "whale", "shark"];
 
   function addTheButtons() {
     $("#buttons-view").empty();
@@ -32,22 +32,22 @@ $(function() {
       var results = response.data;
 
       for (var i = 0; i < results.length; i++) {
-        var gifDiv = $("<div>");
+        
         var rating = results[i].rating;
-        var p = $("<p>").text("Rating: " + rating);
+        // var p = $("<p>").text("Rating: " + rating);
         var animalPicture = $("<img>");
         animalPicture.attr("src", results[i].images.fixed_height_still.url);
         animalPicture.attr(
           "data-still",
           results[i].images.fixed_height_still.url
         );
+        animalPicture.attr("title", "Rating: " + rating)
         animalPicture.attr("data-state", "still");
         animalPicture.addClass("gif");
         animalPicture.attr("data-animate", results[i].images.fixed_height.url);
-        gifDiv.prepend(p);
-        gifDiv.prepend(animalPicture);
-
-        $("#gifs-appear-here").prepend(gifDiv);
+        // $(".gif").prepend(p);
+        $("#gifs-appear-here").prepend(animalPicture);
+        
       }
     });
 
@@ -63,16 +63,14 @@ $(function() {
         $(this).attr("data-state", "still");
       }
     });
+    
+  });
 
-
-
-    $("#add-animal").on("click", function() {
-      event.preventDefault();
-      var addedByUser = $("#animal-input").val().trim();
-      topics.push(addedByUser);
-      addTheButtons();
-      return;
-      // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + addedByUser + "&api_key=pNhzgpc07zmzmPylnM1cWj1ZwCwjYgL3&limit=10";
-    });
+  $("#add-animal").on("click", function() {
+    event.preventDefault();
+    var addedByUser = $("#animal-input").val().trim();
+    topics.push(addedByUser);
+    addTheButtons();
+    
   });
 });
