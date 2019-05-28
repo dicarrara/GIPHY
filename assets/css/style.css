@@ -3,12 +3,18 @@
     float: right;
  }
 
+ .jumbotron {
+    text-align: center;
+}
+
 body {
-    background-image: url("../images/jungle.jpg");
+    background-image: url("../images/sport.png");
     font-weight: 400;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #222;
     clear:both;
+    display: inline;
+    flex-wrap: wrap;
 }
 
 button {
@@ -22,7 +28,7 @@ button {
 .container {
     position: relative;
     width: 100%;
-    max-width: 960px;
+    
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box; }
@@ -67,8 +73,8 @@ label {
 }
 
 .gif {
-    display: inline;
-    margin: 5px;
+    padding: 2px;
+    
 }
 
 #gifs-appear-here {
@@ -76,9 +82,8 @@ label {
 	
 }
 
-
 img {
-	margin-right: 10px;
+	max-width: 300px;
+	max-height: 200px;
 }
-
   

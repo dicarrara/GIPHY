@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <title>GIPHY</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
-        <script src="assets/javascript/game.js" type="text/javascript"></script>
-          </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>GIPHY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+  </head>
 
-    <body>
+  <body>
+    <div class="container">
+      <!--animals will get dumped here -->
+      <div id="buttons-view"></div>
 
-        <div class="container">
-                                     
-                <!--animals will get dumped here -->
-                <div id="buttons-view"></div>
-            
-                <form id="animal-form">
-                  <label for="animal-input">Add an animal</label>
-                  <input type="text" id="animal-input"><br>
-            
-                  <!-- Button triggers new animal to be added -->
-                  <input id="add-animal" type="submit" value="Add an animal">
-                </form>
+      <form id="animal-form">
+        <label for="animal-input">Add an animal</label>
+        <input type="text" id="animal-input" /><br />
 
-                <div id ="gifs-appear-here"></div>
-        </div>
+        <!-- Button triggers new animal to be added -->
+        <input id="add-animal" type="submit" value="Add an animal" />
+      </form>
 
-    </body>
+      <div  class="inline-left btn-group" id="gifs-appear-here"></div>
+    </div>
+  </body>
 </html>
